@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 
 # This script will set up firewall rules on our slave servers.
-# For now, I am not going to create a whitelist of ip addresses and ports.
-# Instead, I am going to create just a blacklist.
+# For now, we blacklist ip addresses and ports.
+# In the future, we should use whitelist approach.
+#
 # TODO: Consider using ufw since it already implements a good set of default
 # rules.
-
+#
 # Dependencies:
 # sudo apt-get install iptables-persistent netfilter-persistent
-# sudo netfilter-persistent save
-# sudo netfilter-persistent reload
+#
+# Useful iptables examples:
+# sudo iptables --list
+# sudo iptables -L -v -n
 #
 # Resources:
 # * https://crm.vpscheap.net/knowledgebase.php?action=displayarticle&id=29
@@ -45,3 +48,7 @@ iptables -A INPUT -s 176.9.2.145 -j DROP
 iptables -A OUTPUT -s 176.9.2.145 -j DROP
 iptables -A INPUT -s 107.178.104.10 -j DROP
 iptables -A OUTPUT -s 107.178.104.10 -j DROP
+
+# Save Rules
+netfilter-persistent save
+netfilter-persistent reload
