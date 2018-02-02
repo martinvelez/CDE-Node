@@ -1,24 +1,12 @@
 # Kodethon Production
 
+The [Kodethon](https://kodethon.com) cluster consists of a master server and multiple slave servers.
 This repository holds configuration files and scripts used in preparing and
-adding a Kodethon slave server.
+adding a Kodethon slave server to the cluster.
 
-## Getting Started
+## Preparing a Slave Server
 
-The Kodethon cluster consists of a master server and multiple slave servers.
-Before a slave server can be added to the Kodethon cluster, it must be prepared. 
 These instructions will help you prepare a slave server.
-
-### Prerequisites
-
-### Installing
-
-
-TODO: Transfer instructions from https://bitbucket.org/martinvelez/online_ide_backend.
-
-TODO: Script instructions.
-
-## Add a Slave Server to Kodethon Cluster
 
 TODO: Transfer instructions from https://bitbucket.org/martinvelez/online_ide_backend.
 
@@ -27,6 +15,8 @@ TODO: Script instructions.
 ## Contributing
 
 ### Pull Requests
+
+Do not push commits directly to this repository.  Create pull requests instead.
 
 1. Fork this repository.
 2. Make commit in your fork.
